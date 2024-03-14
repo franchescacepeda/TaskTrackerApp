@@ -33,3 +33,13 @@ taskTable.innerHTML = tasks.map(task => `
         <td><button onclick="removeTask(this)">Remove</button></td>
     </tr>
 `).join('');
+
+function init() {
+    taskTable.innerHTML = '';
+
+    tasks = [];
+    render();
+}
+taskForm.addEventListener('submit', handleSubmission);
+
+init ();
